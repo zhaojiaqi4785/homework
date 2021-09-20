@@ -1,0 +1,78 @@
+
+body {
+  --width: 100%;
+  --height: auto;
+  --swiperItemWidth: 80vw;
+  --swiperItemSpacing: 4vw;
+}
+.my-swiper {
+  width: var(--width);
+  height: var(--height);
+  background-color: pink;
+  &__visual {
+    width: 100vw;
+    height: var(--height);
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    &__mon {
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: relative;
+      white-space: unset;
+      flex: none;
+    }
+  }
+}
+.card-swiper {
+  width: var(--width);
+  height: 200px;
+  background-color: pink;
+  &__visual {
+    height: var(--height);
+    overflow: hidden;
+    &__mon {
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: relative;
+      white-space: unset;
+      flex: none;
+    }
+  }
+}
+.swiper-child {
+  width: var(--swiperItemWidth);
+  height: var(--height);
+  color: red;
+  flex-shrink: 0;
+  margin-left: var(--swiperItemSpacing);
+}
+.card-child {
+  width: 50%;
+  height: 150px;
+  display: inline-block;
+  position: absolute;
+  cursor: pointer;
+  &__mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  & img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.is-inStage {
+  z-index: 2!important;
+}
+.is-active {
+  z-index: 3!important;
+}
+.is-animate {
+  transition: transform .1s ease-in-out;
+}
