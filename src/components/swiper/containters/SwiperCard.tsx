@@ -64,7 +64,7 @@ const SwiperCard: FC<SwiperCardProps> = forwardRef(( { children, images, stepInt
   }, [children, images]); 
 
   // 拦截 是否存在子元素 没有 => 直接报错
-  if(childNum === 0) {
+  if(childNum === 0 && images.length === 0) {
     console.error('没有子元素啊,哥!')
     return null;
   }
